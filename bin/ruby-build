@@ -326,11 +326,11 @@ http_get_aria2c() {
 }
 
 http_head_curl() {
-  curl -qsILf ${CURL_OPTS} "$1" >&4 2>&1
+  curl -1 -qsILf ${CURL_OPTS} "$1" >&4 2>&1
 }
 
 http_get_curl() {
-  curl -q -o "${2:--}" -sSLf ${CURL_OPTS} "$1"
+  curl -1 -q -o "${2:--}" -sSLf ${CURL_OPTS} "$1"
 }
 
 http_head_wget() {
